@@ -1,4 +1,5 @@
 package com.vitorota.customdetektrules
 
-class Main {
+fun main() {
+    println("Test")
 }
