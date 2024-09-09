@@ -4,6 +4,12 @@ plugins {
     alias(libs.plugins.detektGradlePlugin)
 }
 
+detekt {
+    config.setFrom(file("../config/detekt/detekt.yml"))
+    buildUponDefaultConfig = true
+    // Enable all the default detekt configurations, so you can declare just the ones that want to update
+}
+
 android {
     namespace = "com.vitorota.customdetektrules"
     compileSdk = 34
