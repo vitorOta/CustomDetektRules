@@ -1,0 +1,21 @@
+# intellij
+.idea
+*.iml
+
+# android studio
+.gradle
+/local.properties
+/captures
+.externalNativeBuild
+**/*.hprof
+/.kotlin
+
+# build artifacts
+**/build
+/buildSrc/build
+reports/
+/release_notes*.txt
+*.apk
+
+# mac
+.DS_Store
