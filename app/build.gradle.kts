@@ -4,6 +4,11 @@ plugins {
     alias(libs.plugins.detektGradlePlugin)
 }
 
+detekt {
+    config.setFrom(file("config/detekt.detekt.yml"))
+    buildUponDefaultConfig = true
+}
+
 android {
     namespace = "com.vitorota.customdetektrules"
     compileSdk = 34
