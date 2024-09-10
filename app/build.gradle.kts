@@ -6,8 +6,8 @@ plugins {
 
 detekt {
     config.setFrom(file("../config/detekt/detekt.yml"))
-    buildUponDefaultConfig = true
-    // Enable all the default detekt configurations, so you can declare just the ones that want to update
+    buildUponDefaultConfig = false
+    // if true, enable all the default detekt configurations, so you can declare just the ones that want to update
 }
 
 android {
@@ -43,8 +43,9 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
+
+    detektPlugins(project(":detektrules"))
 }

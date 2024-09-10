@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "CustomDetektRules"
 include(":app")
- 
+include(":detektrules")
