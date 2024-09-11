@@ -1,7 +1,6 @@
 package com.vitorota.detektrules.rules
 
 import io.gitlab.arturbosch.detekt.api.CodeSmell
-import io.gitlab.arturbosch.detekt.api.Config
 import io.gitlab.arturbosch.detekt.api.Debt
 import io.gitlab.arturbosch.detekt.api.Entity
 import io.gitlab.arturbosch.detekt.api.Issue
@@ -9,7 +8,7 @@ import io.gitlab.arturbosch.detekt.api.Rule
 import io.gitlab.arturbosch.detekt.api.Severity
 import org.jetbrains.kotlin.psi.KtClass
 
-class DoNotNameClassWith(config: Config) : Rule(config) {
+class DoNotNameClassWith : Rule() {
 
     // the ideal would be to have this at the configuration, but it didn't worked
     private val namesToAvoid = listOf("Batata", "Shitzu")
